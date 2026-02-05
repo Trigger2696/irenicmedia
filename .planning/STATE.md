@@ -16,19 +16,19 @@
 
 **Phase:** 4 of 6 (Social Proof)
 
-**Plan:** 1 of 3 complete
+**Plan:** 2 of 3 complete
 
 **Status:** In progress
 
-**Last activity:** 2026-02-06 - Completed 04-01-PLAN.md (Testimonials Section)
+**Last activity:** 2026-02-06 - Completed 04-02-PLAN.md (Case Studies Section)
 
 **Progress:**
 ```
-[██████████████████████████████████████████████████------] 4/6 phases (58% - Phase 4 plan 1/3)
+[████████████████████████████████████████████████████----] 4/6 phases (67% - Phase 4 plan 2/3)
 Phase 1: Foundation & Layout — Verified ✓
 Phase 2: Hero Section — Verified ✓
 Phase 3: Services & About — Verified ✓
-Phase 4: Social Proof — In progress (1/3 plans)
+Phase 4: Social Proof — In progress (2/3 plans)
 ```
 
 ---
@@ -36,7 +36,7 @@ Phase 4: Social Proof — In progress (1/3 plans)
 ## Performance Metrics
 
 **Completed:**
-- Plans: 9
+- Plans: 10
 - Phases: 3
 
 **Velocity:**
@@ -84,6 +84,9 @@ Phase 4: Social Proof — In progress (1/3 plans)
 | Star rating accessibility pattern | role='img' with aria-label for screen reader support | 2026-02-06 |
 | Testimonial visual hierarchy | Rating at top, review text, then client info (what was said before who said it) | 2026-02-06 |
 | Diverse testimonial industries | Tech, finance, fashion, mobile app to show breadth of client base | 2026-02-06 |
+| Badge component variants | default (muted bg) and accent (highlighted) for flexibility | 2026-02-06 |
+| Case studies 2-column grid | md:grid-cols-2 for project showcase, more visual than services 3-col | 2026-02-06 |
+| 3:2 image aspect ratio | Standard ratio for project screenshots, consistent presentation | 2026-02-06 |
 
 ### Open Todos
 
@@ -96,7 +99,7 @@ Phase 4: Social Proof — In progress (1/3 plans)
 - [x] Complete 03-01: Services section with 6 service cards
 - [x] Complete 03-02: About and Why Us sections
 - [x] Create fictional testimonials (3-4) for Phase 4
-- [ ] Create fictional case studies (3-4) for Phase 4
+- [x] Create fictional case studies (3-4) for Phase 4
 - [ ] Define pricing tiers for Phase 5
 
 ### Blockers
@@ -109,14 +112,14 @@ None.
 
 **Last session:** 2026-02-06
 
-**Stopped at:** Completed 04-01-PLAN.md (Testimonials Section)
+**Stopped at:** Completed 04-02-PLAN.md (Case Studies Section)
 
 **Resume file:** None
 
 **Context for next session:**
-- Phase 4 plan 1/3 complete: Testimonials section implemented
-- Components: TestimonialCard, Testimonials
-- 4 fictional client testimonials with diverse industries
-- Accessible star rating pattern established (role='img' + aria-label)
-- Responsive 2-column grid with staggered animations
-- Ready for 04-02: Case Studies section
+- Phase 4 plan 2/3 complete: Case Studies section implemented
+- Components: Badge, CaseStudyCard, CaseStudies
+- 4 fictional case studies with realistic marketing results
+- Badge component established for reusable pill-shaped tags
+- 3:2 aspect ratio for project images, responsive grid layout
+- Ready for 04-03: Social Proof Integration
