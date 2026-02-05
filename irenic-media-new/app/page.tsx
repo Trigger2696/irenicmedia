@@ -2,6 +2,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero/Hero'
 import Services from '@/components/Services/Services'
+import About from '@/components/About/About'
+import WhyUs from '@/components/WhyUs/WhyUs'
 
 export default function Home() {
   return (
@@ -18,37 +20,10 @@ export default function Home() {
       <Services />
 
       {/* About Section */}
-      <section id="about" className="section" style={{ scrollMarginTop: '100px' }}>
-        <div className="hero-container">
-          <div className="flex items-center gap-3 mb-4">
-            <i className="fa-solid fa-star text-accent"></i>
-            <span className="text-primary font-bold">About Us</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Who We <span className="accent-color">Are</span>
-          </h2>
-          <p className="text-[var(--text-color)] mt-4 max-w-2xl">
-            Founded by Raj Shah & Ruchika Chandel, Irenic Media brings together
-            strategy, creativity, and technology to drive meaningful growth.
-          </p>
-        </div>
-      </section>
+      <About />
 
       {/* Why Us Section */}
-      <section id="why-us" className="section bg-[var(--accent-color-3)]" style={{ scrollMarginTop: '100px' }}>
-        <div className="hero-container">
-          <div className="flex items-center gap-3 mb-4">
-            <i className="fa-solid fa-star text-accent"></i>
-            <span className="text-primary font-bold">Why Choose Us</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Why <span className="accent-color">Irenic Media</span>
-          </h2>
-          <p className="text-[var(--text-color)] mt-4 max-w-2xl">
-            Strategy before execution. Data-driven decisions. Transparent partnership.
-          </p>
-        </div>
-      </section>
+      <WhyUs />
 
       {/* Testimonials Section */}
       <section id="testimonials" className="section" style={{ scrollMarginTop: '100px' }}>
