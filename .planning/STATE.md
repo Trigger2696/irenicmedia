@@ -6,7 +6,7 @@
 
 **Core value:** Website clearly communicates Irenic Media's positioning as a strategy-first agency and enables client contact.
 
-**Current focus:** Phase 1 in progress. Project foundation established.
+**Current focus:** Phase 1 in progress. Navigation components complete.
 
 ---
 
@@ -16,16 +16,16 @@
 
 **Phase:** 1 of 6 (Foundation & Layout)
 
-**Plan:** 1 of 3 complete
+**Plan:** 2 of 3 complete
 
 **Status:** In progress
 
-**Last activity:** 2026-02-05 - Completed 01-01-PLAN.md (Project Setup)
+**Last activity:** 2026-02-05 - Completed 01-02-PLAN.md (Navigation Components)
 
 **Progress:**
 ```
-[=========--------------------------------------------] 1/18 plans (6%)
-Phase 1: Foundation & Layout — In Progress (1/3 plans)
+[==================-----------------------------------] 2/18 plans (11%)
+Phase 1: Foundation & Layout — In Progress (2/3 plans)
 ```
 
 ---
@@ -33,11 +33,11 @@ Phase 1: Foundation & Layout — In Progress (1/3 plans)
 ## Performance Metrics
 
 **Completed:**
-- Plans: 1
+- Plans: 2
 - Phases: 0
 
 **Velocity:**
-- Average time per plan: 7 min
+- Average time per plan: ~10 min
 - Average time per phase: N/A
 
 **Quality:**
@@ -59,11 +59,14 @@ Phase 1: Foundation & Layout — In Progress (1/3 plans)
 | Tailwind v4 CSS-based config | create-next-app@latest installs Tailwind v4; adapted with @theme and @custom-variant | 2026-02-05 |
 | Dark theme as default (no class) | Matches marko template pattern; light adds .light class | 2026-02-05 |
 | Theme script in head for FOUC prevention | Script runs before React hydration to set correct theme class | 2026-02-05 |
+| Scroll threshold 10px | Prevents jitter from minor scroll movements | 2026-02-05 |
+| Mobile nav breakpoint lg (1024px) | Matches marko template responsive pattern | 2026-02-05 |
+| Phone number at xl (1280px) only | Saves space on smaller desktop screens | 2026-02-05 |
 
 ### Open Todos
 
 - [x] Begin Phase 1: Foundation & Layout
-- [ ] Complete 01-02: Navigation component
+- [x] Complete 01-02: Navigation component
 - [ ] Complete 01-03: Footer component
 - [ ] Create fictional testimonials (3-4) for Phase 4
 - [ ] Create fictional case studies (3-4) for Phase 4
@@ -77,16 +80,16 @@ None.
 
 ## Session Continuity
 
-**Last session:** 2026-02-05T16:38:49Z
+**Last session:** 2026-02-05
 
-**Stopped at:** Completed 01-01-PLAN.md (Project Setup)
+**Stopped at:** Completed 01-02-PLAN.md (Navigation Components)
 
 **Resume file:** None
 
 **Context for next session:**
-- Next.js 16 project created in irenic-media-new/
-- Tailwind v4 with CSS variables from marko template
-- Dark theme default with .light class for light mode
-- Plus Jakarta Sans font loaded
-- Font Awesome icons available
-- Ready for 01-02: Navigation component
+- Header component with show-on-scroll-up behavior
+- MobileMenu slides from right with Framer Motion
+- ThemeToggle with localStorage persistence
+- useScrollDirection custom hook for scroll detection
+- All 8 sections with IDs for smooth scroll navigation
+- Ready for 01-03: Footer component
