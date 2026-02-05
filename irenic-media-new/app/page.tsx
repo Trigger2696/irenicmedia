@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Hero from '@/components/Hero/Hero'
 
 export default function Home() {
   return (
@@ -9,21 +10,8 @@ export default function Home() {
       {/* Spacer for fixed header */}
       <div className="h-24 md:h-28"></div>
 
-      {/* Hero Section Placeholder */}
-      <section id="hero" className="section min-h-[80vh] flex items-center">
-        <div className="hero-container">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary">
-            Growth without chaos.
-          </h1>
-          <p className="text-xl md:text-2xl text-[var(--text-color)] mt-4">
-            Strategy without noise.
-          </p>
-          <p className="text-[var(--text-color)] mt-6 max-w-2xl">
-            We are Irenic Media, a strategy-led digital marketing and technology agency
-            helping ambitious brands build sustainable, long-term growth.
-          </p>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <Hero />
 
       {/* Services Section */}
       <section id="services" className="section bg-[var(--accent-color-3)]" style={{ scrollMarginTop: '100px' }}>
