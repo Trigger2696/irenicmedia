@@ -10,7 +10,7 @@ This roadmap delivers a complete single-page Next.js website that matches the ma
 
 | Phase | Goal | Requirements | Status |
 |-------|------|--------------|--------|
-| 1 - Foundation & Layout | Core structure and navigation working | 5 | Not Started |
+| 1 - Foundation & Layout | Core structure and navigation working | 5 | Planning Complete |
 | 2 - Hero Section | Video background hero with brand messaging live | 5 | Not Started |
 | 3 - Services & About | Core content sections complete | 10 | Not Started |
 | 4 - Social Proof | Testimonials and case studies displayed | 6 | Not Started |
@@ -40,6 +40,13 @@ This roadmap delivers a complete single-page Next.js website that matches the ma
 3. User can toggle between dark and light themes and see immediate visual change
 4. User can see footer with all required links and social icons
 5. All navigation anchor links work correctly without page reload
+
+**Plans:** 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Project setup, CSS foundation, theme infrastructure
+- [ ] 01-02-PLAN.md — Header with scroll behavior, mobile menu, theme toggle
+- [ ] 01-03-PLAN.md — Footer with links, social icons, page integration
 
 ---
 
