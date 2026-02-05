@@ -6,7 +6,7 @@
 
 **Core value:** Website clearly communicates Irenic Media's positioning as a strategy-first agency and enables client contact.
 
-**Current focus:** Phase 1 verified and complete. Ready to begin Phase 2: Hero Section.
+**Current focus:** Phase 2 in progress. Building hero section components.
 
 ---
 
@@ -14,18 +14,19 @@
 
 **Milestone:** v1.0 — Irenic Media Website Launch
 
-**Phase:** 1 of 6 (Foundation & Layout)
+**Phase:** 2 of 6 (Hero Section)
 
-**Plan:** 3 of 3 complete
+**Plan:** 1 of 3 complete
 
-**Status:** Phase 1 verified ✓
+**Status:** In progress
 
-**Last activity:** 2026-02-05 - Completed 01-03-PLAN.md (Footer Component)
+**Last activity:** 2026-02-05 - Completed 02-01-PLAN.md (Hero Building Blocks)
 
 **Progress:**
 ```
-[█████████------------------------------------------------] 1/6 phases (17%)
-Phase 1: Foundation & Layout — Verified ✓
+[██████████████-------------------------------------------] 4/18 plans (22%)
+Phase 1: Foundation & Layout — Verified
+Phase 2: Hero Section — 1/3 plans complete
 ```
 
 ---
@@ -33,11 +34,11 @@ Phase 1: Foundation & Layout — Verified ✓
 ## Performance Metrics
 
 **Completed:**
-- Plans: 3
+- Plans: 4
 - Phases: 1
 
 **Velocity:**
-- Average time per plan: ~8 min
+- Average time per plan: ~7 min
 - Average time per phase: ~25 min (Phase 1)
 
 **Quality:**
@@ -64,6 +65,9 @@ Phase 1: Foundation & Layout — Verified ✓
 | Phone number at xl (1280px) only | Saves space on smaller desktop screens | 2026-02-05 |
 | Footer grid uses lg:col-span-2 for brand | Gives brand section proper visual weight in 4-column layout | 2026-02-05 |
 | scrollMarginTop 100px on all sections | Ensures fixed header doesn't cover content on anchor navigation | 2026-02-05 |
+| @types/youtube for TypeScript | Installed npm types package for YouTube IFrame API rather than inline declarations | 2026-02-05 |
+| useCountUp ~60 steps | Provides smooth animation regardless of target value | 2026-02-05 |
+| YouTubeBackground cover sizing | Aspect ratio math ensures video covers container without letterboxing | 2026-02-05 |
 
 ### Open Todos
 
@@ -71,6 +75,9 @@ Phase 1: Foundation & Layout — Verified ✓
 - [x] Complete 01-01: Project setup
 - [x] Complete 01-02: Navigation components
 - [x] Complete 01-03: Footer component
+- [x] Complete 02-01: Hero building blocks (useCountUp, YouTubeBackground)
+- [ ] Complete 02-02: StatCounter and CTA components
+- [ ] Complete 02-03: Hero section assembly
 - [ ] Create fictional testimonials (3-4) for Phase 4
 - [ ] Create fictional case studies (3-4) for Phase 4
 - [ ] Define pricing tiers for Phase 5
@@ -85,13 +92,12 @@ None.
 
 **Last session:** 2026-02-05
 
-**Stopped at:** Phase 1 verified and complete
+**Stopped at:** Completed 02-01-PLAN.md
 
 **Resume file:** None
 
 **Context for next session:**
-- Phase 1 verified: 5/5 must-haves passed
-- Site structure: Header (scroll hide/show), 8 sections, Footer
-- Theme toggle with localStorage persistence
-- All navigation smooth scrolls to anchors
-- Ready for Phase 2: Hero Section (video background, CTAs, stats)
+- Phase 2 in progress: 1/3 plans complete
+- Installed: react-intersection-observer@10.0.2, @types/youtube
+- Created: hooks/useCountUp.ts, components/Hero/YouTubeBackground.tsx
+- Ready for 02-02: StatCounter and CTA button components
