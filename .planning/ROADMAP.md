@@ -133,6 +133,13 @@ Plans:
 4. User can see project image, category, and key results for each case study
 5. Both sections match the marko template's card styling visually
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — TestimonialCard component and Testimonials section with 4 client testimonials
+- [ ] 04-02-PLAN.md — Badge, CaseStudyCard components and CaseStudies section with 4 project showcases
+- [ ] 04-03-PLAN.md — Integrate Testimonials and CaseStudies into page.tsx
+
 ---
 
 ### Phase 5: Pricing & Contact
