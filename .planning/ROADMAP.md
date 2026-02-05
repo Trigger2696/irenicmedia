@@ -12,7 +12,7 @@ This roadmap delivers a complete single-page Next.js website that matches the ma
 |-------|------|--------------|--------|
 | 1 - Foundation & Layout | Core structure and navigation working | 5 | Complete |
 | 2 - Hero Section | Video background hero with brand messaging live | 5 | Complete |
-| 3 - Services & About | Core content sections complete | 10 | Not Started |
+| 3 - Services & About | Core content sections complete | 10 | Planned |
 | 4 - Social Proof | Testimonials and case studies displayed | 6 | Not Started |
 | 5 - Pricing & Contact | Lead conversion sections functional | 7 | Not Started |
 | 6 - Visual Polish | Animations and styling match template exactly | 5 | Not Started |
@@ -103,6 +103,12 @@ Plans:
 4. User sees two-column layout on desktop that stacks on mobile
 5. User can view 4 differentiator cards explaining why to choose Irenic Media
 6. Service cards fade in as user scrolls to them
+
+**Plans:** 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Services section with 6 service cards in responsive grid
+- [ ] 03-02-PLAN.md — About section with founder story/values, Why Us section with differentiator cards
 
 ---
 
