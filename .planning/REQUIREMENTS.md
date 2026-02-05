@@ -96,16 +96,16 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| LAYOUT-01 | Phase 1 | Pending |
-| LAYOUT-02 | Phase 1 | Pending |
-| LAYOUT-03 | Phase 1 | Pending |
-| LAYOUT-04 | Phase 1 | Pending |
-| LAYOUT-05 | Phase 1 | Pending |
-| HERO-01 | Phase 2 | Pending |
-| HERO-02 | Phase 2 | Pending |
-| HERO-03 | Phase 2 | Pending |
-| HERO-04 | Phase 2 | Pending |
-| HERO-05 | Phase 2 | Pending |
+| LAYOUT-01 | Phase 1 | Complete |
+| LAYOUT-02 | Phase 1 | Complete |
+| LAYOUT-03 | Phase 1 | Complete |
+| LAYOUT-04 | Phase 1 | Complete |
+| LAYOUT-05 | Phase 1 | Complete |
+| HERO-01 | Phase 2 | Complete |
+| HERO-02 | Phase 2 | Complete |
+| HERO-03 | Phase 2 | Complete |
+| HERO-04 | Phase 2 | Complete |
+| HERO-05 | Phase 2 | Complete |
 | SERV-01 | Phase 3 | Pending |
 | SERV-02 | Phase 3 | Pending |
 | SERV-03 | Phase 3 | Pending |

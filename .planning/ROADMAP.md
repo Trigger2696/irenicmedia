@@ -11,7 +11,7 @@ This roadmap delivers a complete single-page Next.js website that matches the ma
 | Phase | Goal | Requirements | Status |
 |-------|------|--------------|--------|
 | 1 - Foundation & Layout | Core structure and navigation working | 5 | Complete |
-| 2 - Hero Section | Video background hero with brand messaging live | 5 | Not Started |
+| 2 - Hero Section | Video background hero with brand messaging live | 5 | Complete |
 | 3 - Services & About | Core content sections complete | 10 | Not Started |
 | 4 - Social Proof | Testimonials and case studies displayed | 6 | Not Started |
 | 5 - Pricing & Contact | Lead conversion sections functional | 7 | Not Started |
@@ -73,8 +73,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Install react-intersection-observer, useCountUp hook, YouTubeBackground component
-- [ ] 02-02-PLAN.md — StatCounter component, Hero section, page integration
+- [x] 02-01-PLAN.md — Install react-intersection-observer, useCountUp hook, YouTubeBackground component
+- [x] 02-02-PLAN.md — StatCounter component, Hero section, page integration
 
 ---
 
