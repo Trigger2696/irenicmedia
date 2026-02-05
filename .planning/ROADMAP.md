@@ -70,6 +70,12 @@ Plans:
 4. User can click "Explore Services" and scroll to services section
 5. User can see all three stats displayed prominently in hero
 
+**Plans:** 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Install react-intersection-observer, useCountUp hook, YouTubeBackground component
+- [ ] 02-02-PLAN.md — StatCounter component, Hero section, page integration
+
 ---
 
 ### Phase 3: Services & About
