@@ -4,6 +4,8 @@ import Hero from '@/components/Hero/Hero'
 import Services from '@/components/Services/Services'
 import About from '@/components/About/About'
 import WhyUs from '@/components/WhyUs/WhyUs'
+import Testimonials from '@/components/Testimonials/Testimonials'
+import CaseStudies from '@/components/CaseStudies/CaseStudies'
 
 export default function Home() {
   return (
@@ -26,36 +28,10 @@ export default function Home() {
       <WhyUs />
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="section" style={{ scrollMarginTop: '100px' }}>
-        <div className="hero-container">
-          <div className="flex items-center gap-3 mb-4">
-            <i className="fa-solid fa-star text-accent"></i>
-            <span className="text-primary font-bold">Testimonials</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            What Our <span className="accent-color">Clients Say</span>
-          </h2>
-          <p className="text-[var(--text-color)] mt-4 max-w-2xl">
-            Don't just take our word for it - hear from the brands we've helped grow.
-          </p>
-        </div>
-      </section>
+      <Testimonials />
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="section bg-[var(--accent-color-3)]" style={{ scrollMarginTop: '100px' }}>
-        <div className="hero-container">
-          <div className="flex items-center gap-3 mb-4">
-            <i className="fa-solid fa-star text-accent"></i>
-            <span className="text-primary font-bold">Case Studies</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Our <span className="accent-color">Success Stories</span>
-          </h2>
-          <p className="text-[var(--text-color)] mt-4 max-w-2xl">
-            Real results from real partnerships.
-          </p>
-        </div>
-      </section>
+      <CaseStudies />
 
       {/* Pricing Section */}
       <section id="pricing" className="section" style={{ scrollMarginTop: '100px' }}>
