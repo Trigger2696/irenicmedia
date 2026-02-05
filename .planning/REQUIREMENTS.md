@@ -96,13 +96,41 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| LAYOUT-* | TBD | Pending |
-| HERO-* | TBD | Pending |
-| SERV-* | TBD | Pending |
-| ABOUT-* | TBD | Pending |
-| WHY-* | TBD | Pending |
-| TEST-* | TBD | Pending |
-| CASE-* | TBD | Pending |
-| PRICE-* | TBD | Pending |
-| CONT-* | TBD | Pending |
-| VIS-* | TBD | Pending |
+| LAYOUT-01 | Phase 1 | Pending |
+| LAYOUT-02 | Phase 1 | Pending |
+| LAYOUT-03 | Phase 1 | Pending |
+| LAYOUT-04 | Phase 1 | Pending |
+| LAYOUT-05 | Phase 1 | Pending |
+| HERO-01 | Phase 2 | Pending |
+| HERO-02 | Phase 2 | Pending |
+| HERO-03 | Phase 2 | Pending |
+| HERO-04 | Phase 2 | Pending |
+| HERO-05 | Phase 2 | Pending |
+| SERV-01 | Phase 3 | Pending |
+| SERV-02 | Phase 3 | Pending |
+| SERV-03 | Phase 3 | Pending |
+| SERV-04 | Phase 3 | Pending |
+| ABOUT-01 | Phase 3 | Pending |
+| ABOUT-02 | Phase 3 | Pending |
+| ABOUT-03 | Phase 3 | Pending |
+| WHY-01 | Phase 3 | Pending |
+| WHY-02 | Phase 3 | Pending |
+| WHY-03 | Phase 3 | Pending |
+| TEST-01 | Phase 4 | Pending |
+| TEST-02 | Phase 4 | Pending |
+| TEST-03 | Phase 4 | Pending |
+| CASE-01 | Phase 4 | Pending |
+| CASE-02 | Phase 4 | Pending |
+| CASE-03 | Phase 4 | Pending |
+| PRICE-01 | Phase 5 | Pending |
+| PRICE-02 | Phase 5 | Pending |
+| PRICE-03 | Phase 5 | Pending |
+| CONT-01 | Phase 5 | Pending |
+| CONT-02 | Phase 5 | Pending |
+| CONT-03 | Phase 5 | Pending |
+| CONT-04 | Phase 5 | Pending |
+| VIS-01 | Phase 6 | Pending |
+| VIS-02 | Phase 6 | Pending |
+| VIS-03 | Phase 6 | Pending |
+| VIS-04 | Phase 6 | Pending |
+| VIS-05 | Phase 6 | Pending |
