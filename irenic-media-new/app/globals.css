@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
+/* ================== Tailwind v4 Theme Configuration ================== */
+
+@theme {
+  /* Custom colors */
+  --color-accent: #C82AEF;
+  --color-accent-light: #e3caff;
+
+  /* Custom border radius */
+  --radius-marko: 25px;
+
+  /* Custom font family - will be set by CSS variable from next/font */
+  --font-sans: var(--font-jakarta), sans-serif;
+}
+
+/* Tailwind v4 dark mode with class selector */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ================== Marko Template CSS Variables ================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dark theme (default) */
+  --primary: #D1D1D1;
+  --secondary: #040404;
+  --text-color: #8B8B8B;
+  --accent-color: #C82AEF;
+  --accent-color-2: #FFFFFF;
+  --accent-color-3: #1F1F1F;
+  --accent-color-4: #0E0E0E;
+  --accent-color-5: #0404047D;
+  --accent-color-6: #C82AEF85;
+  --accent-color-7: #FFFFFF8C;
+  --star-color: #EFBC2A;
+  --error-color: #e63946;
+  --accent-transparent: #00000000;
+  --accent-transparent-2: #00000073;
+  --accent-transparent-3: rgba(255, 255, 255, 0.041);
+  --box-shadow-top-left: -3px -3px 7px 0px rgba(200, 42, 239, 0.44);
+  --box-shadow-bottom-right: 3px 3px 7px 0px rgba(200, 42, 239, 0.44);
+  --box-shadow-top-left-wide: -3px -3px 10px 0px rgba(200, 42, 239, 0.44);
+  --box-shadow-bottom-right-wide: 3px 3px 10px 0px rgba(200, 42, 239, 0.44);
+  --global-font: "Plus Jakarta Sans", sans-serif;
+  --global-border-radius: 25px;
+
+  /* Font Weight Variables */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Font Size Variables */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 22px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 25px;
+  --font-size-5xl: 28px;
+  --font-size-6xl: 30px;
+  --font-size-7xl: 32px;
+  --font-size-8xl: 38px;
+  --font-size-9xl: 40px;
+  --font-size-10xl: 45px;
+
+  /* Line Height Variables */
+  --line-height-tight: 1em;
+  --line-height-snug: 1.2em;
+  --line-height-normal: 1.3em;
+  --line-height-relaxed: 1.4em;
+  --line-height-loose: 1.5em;
+  --line-height-extra-loose: 1.6em;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Light theme */
+.light {
+  --primary: #1F1F1F;
+  --secondary: #FFFAFA;
+  --text-color: #4A4A4A;
+  --accent-color: #C82AEF;
+  --accent-color-2: #000000;
+  --accent-color-3: #e3caff;
+  --accent-color-4: #f5f5f5;
+  --accent-color-5: #FFFFFF7D;
+  --accent-color-6: #C82AEF33;
+  --accent-color-7: #FFFFFF8C;
+  --star-color: #EFBC2A;
+  --error-color: #E63946;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ================== Base Styles ================== */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ================== Utility Classes ================== */
+
+/* Section spacing matching marko template */
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* Container matching marko template */
+.hero-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Color utility classes */
+.accent-color {
+  color: var(--accent-color);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--text-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-accent-3 {
+  background-color: var(--accent-color-3);
+}
+
+.bg-accent-4 {
+  background-color: var(--accent-color-4);
+}
+
+/* Border radius utility */
+.rounded-marko {
+  border-radius: var(--global-border-radius);
+}
+
+/* Box shadow utilities */
+.shadow-accent {
+  box-shadow: var(--box-shadow-top-left), var(--box-shadow-bottom-right);
+}
+
+.shadow-accent-wide {
+  box-shadow: var(--box-shadow-top-left-wide), var(--box-shadow-bottom-right-wide);
 }
