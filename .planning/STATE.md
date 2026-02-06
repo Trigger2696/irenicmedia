@@ -6,7 +6,7 @@
 
 **Core value:** Website clearly communicates Irenic Media's positioning as a strategy-first agency and enables client contact.
 
-**Current focus:** Phase 6 in progress. Font Awesome icon migration complete.
+**Current focus:** Phase 6 in progress. AnimateOnScroll extraction and Font Awesome migration complete.
 
 ---
 
@@ -20,7 +20,7 @@
 
 **Status:** In progress
 
-**Last activity:** 2026-02-06 - Completed 06-02-PLAN.md (Font Awesome Icon Migration)
+**Last activity:** 2026-02-06 - Completed 06-01-PLAN.md (AnimateOnScroll Extraction)
 
 **Progress:**
 ```
@@ -129,14 +129,15 @@ None.
 
 **Last session:** 2026-02-06
 
-**Stopped at:** Completed 06-02-PLAN.md (Font Awesome Icon Migration)
+**Stopped at:** Completed 06-01-PLAN.md (AnimateOnScroll Extraction)
 
 **Resume file:** None
 
 **Context for next session:**
 - Phase 6 in progress: Visual polish
-- 06-01 complete: AnimateOnScroll refactored to shared component
+- 06-01 complete: AnimateOnScroll extracted to shared component (eliminated 226 lines duplication)
 - 06-02 complete: Icons migrated from lucide-react to Font Awesome
-- All section icons now use FA classes: fa-share-nodes, fa-magnifying-glass, etc.
-- ContactForm.tsx still uses lucide-react (intentionally excluded from migration)
+- All 7 section components now import from @/components/AnimateOnScroll
+- Hero.tsx retains local AnimateOnScroll (per project decision)
+- Standardized timing: 600ms duration, easeOut, 0.15 threshold
 - Ready for 06-03: Final visual polish tasks
