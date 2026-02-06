@@ -193,6 +193,13 @@ Plans:
 4. User sees consistent animation timing and easing across all sections
 5. Site feels polished and production-ready with no visual inconsistencies
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Extract shared AnimateOnScroll component, standardize animation timing
+- [ ] 06-02-PLAN.md — Migrate icons from lucide-react to Font Awesome
+- [ ] 06-03-PLAN.md — Complete CSS variable audit, add Hero animation, final polish
+
 ---
 
 ## Notes
