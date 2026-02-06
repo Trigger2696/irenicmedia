@@ -166,6 +166,11 @@ Plans:
 6. User sees success message after submitting valid form
 7. User can see contact email, phone, and location displayed
 
+**Plans:** 1 plan
+
+Plans:
+- [ ] 05-01-PLAN.md — Contact section with ContactForm, validation, and contact info display
+
 ---
 
 ### Phase 6: Visual Polish
