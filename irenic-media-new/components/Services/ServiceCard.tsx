@@ -1,16 +1,15 @@
 'use client'
 
-import { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface ServiceCardProps {
-  icon: LucideIcon
+  icon: string
   title: string
   description: string
   className?: string
 }
 
-export function ServiceCard({ icon: Icon, title, description, className }: ServiceCardProps) {
+export function ServiceCard({ icon, title, description, className }: ServiceCardProps) {
   return (
     <div className={cn(
       'p-6 rounded-marko bg-[var(--body-bg)] border border-[var(--accent-color-3)]',
@@ -19,7 +18,7 @@ export function ServiceCard({ icon: Icon, title, description, className }: Servi
     )}>
       {/* Icon */}
       <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4">
-        <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
+        <i className={cn(icon, 'text-3xl text-accent')} />
       </div>
 
       {/* Content */}

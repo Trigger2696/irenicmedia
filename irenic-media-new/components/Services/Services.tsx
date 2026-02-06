@@ -3,43 +3,35 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ServiceCard } from './ServiceCard'
-import {
-  Share2,      // Social Media
-  Search,      // SEO
-  TrendingUp,  // Performance Marketing
-  Users,       // Influencer
-  Smartphone,  // Mobile App
-  Code         // Custom Software
-} from 'lucide-react'
 
 const services = [
   {
-    icon: Share2,
+    icon: 'fa-solid fa-share-nodes',
     title: 'Social Media Marketing',
     description: 'Strategic social media management that builds engaged communities and drives meaningful conversions across all platforms.'
   },
   {
-    icon: Search,
+    icon: 'fa-solid fa-magnifying-glass',
     title: 'SEO',
     description: 'Data-driven SEO strategies that improve your search rankings and deliver sustainable organic growth over time.'
   },
   {
-    icon: TrendingUp,
+    icon: 'fa-solid fa-chart-line',
     title: 'Performance Marketing',
     description: 'ROI-focused campaigns across paid channels, optimized continuously for maximum performance and efficiency.'
   },
   {
-    icon: Users,
+    icon: 'fa-solid fa-users',
     title: 'Influencer Campaigns',
     description: 'Authentic influencer partnerships that amplify your brand message and reach your target audiences effectively.'
   },
   {
-    icon: Smartphone,
+    icon: 'fa-solid fa-mobile-screen',
     title: 'Mobile App Development',
     description: 'End-to-end mobile app solutions from concept to launch, with ongoing marketing and user acquisition support.'
   },
   {
-    icon: Code,
+    icon: 'fa-solid fa-code',
     title: 'Custom Software Development',
     description: 'Bespoke software solutions designed and built to solve your unique business challenges and drive efficiency.'
   }
