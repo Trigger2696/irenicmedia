@@ -6,36 +6,36 @@ import { TestimonialCard } from './TestimonialCard'
 
 const testimonials = [
   {
-    name: 'Sarah Chen',
+    name: 'Arjun Mehta',
     company: 'TechFlow Solutions',
     role: 'Marketing Director',
     rating: 5,
     review: 'Irenic Media transformed our digital presence. Their strategic approach resulted in a 150% increase in qualified leads within just 6 months. The team truly understands how to blend creativity with data-driven decisions.',
-    image: '/images/testimonials/placeholder-1.jpg'
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
   },
   {
-    name: 'Michael Rodriguez',
+    name: 'Priya Sharma',
     company: 'GreenLeaf Ventures',
     role: 'Founder & CEO',
     rating: 5,
     review: "Working with Irenic Media has been a game-changer. They don't just execute campaigns – they become true partners in your growth journey. Our ROI has tripled since we started working together.",
-    image: '/images/testimonials/placeholder-2.jpg'
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&h=150&fit=crop&crop=face'
   },
   {
-    name: 'Priya Sharma',
+    name: 'Vikram Desai',
     company: 'Bloom Fashion',
     role: 'Brand Manager',
     rating: 5,
     review: "The transparency and communication from Irenic Media is unmatched. We always know exactly what's happening with our campaigns and why. They've helped us build a loyal community of over 100k followers.",
-    image: '/images/testimonials/placeholder-3.jpg'
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face'
   },
   {
-    name: 'David Kim',
+    name: 'Eloisa Flament',
     company: 'FitnessPro App',
     role: 'Head of Growth',
-    rating: 4,
+    rating: 5,
     review: 'From app development to user acquisition, Irenic Media handled everything seamlessly. Our app downloads increased by 200% in the first quarter after launch. Highly recommend their mobile expertise.',
-    image: '/images/testimonials/placeholder-4.jpg'
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face'
   }
 ]
 

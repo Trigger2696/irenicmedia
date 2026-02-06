@@ -38,13 +38,10 @@ export default function Header() {
               <a
                 href="#"
                 onClick={handleLogoClick}
-                className="flex items-center"
+                className="flex items-center gap-2"
               >
-                <img
-                  src="/assets/images/marko-logo.png"
-                  alt="Irenic Media"
-                  className="site-logo h-8 md:h-10 w-auto"
-                />
+                <span className="text-2xl md:text-3xl font-black text-accent">Irenic</span>
+                <span className="text-2xl md:text-3xl font-black text-primary">Media</span>
               </a>
             </div>
 
@@ -56,7 +53,7 @@ export default function Header() {
                     <a
                       href={link.href}
                       onClick={(e) => handleNavClick(e, link.href)}
-                      className="nav-link px-4 py-2 text-base font-semibold text-primary hover:text-accent transition-colors"
+                      className="nav-link px-4 py-2 text-base font-semibold text-primary hover:text-accent transition-colors whitespace-nowrap"
                     >
                       {link.name}
                     </a>

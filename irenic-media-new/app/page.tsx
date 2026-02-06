@@ -6,16 +6,14 @@ import About from '@/components/About/About'
 import WhyUs from '@/components/WhyUs/WhyUs'
 import Testimonials from '@/components/Testimonials/Testimonials'
 import CaseStudies from '@/components/CaseStudies/CaseStudies'
+import Pricing from '@/components/Pricing/Pricing'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
 
-      {/* Spacer for fixed header */}
-      <div className="h-24 md:h-28"></div>
-
-      {/* Hero Section */}
+      {/* Hero Section - starts from top, behind navbar */}
       <Hero />
 
       {/* Services Section */}
@@ -34,20 +32,7 @@ export default function Home() {
       <CaseStudies />
 
       {/* Pricing Section */}
-      <section id="pricing" className="section" style={{ scrollMarginTop: '100px' }}>
-        <div className="hero-container">
-          <div className="flex items-center gap-3 mb-4">
-            <i className="fa-solid fa-star text-accent"></i>
-            <span className="text-primary font-bold">Pricing</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Simple, Transparent <span className="accent-color">Pricing</span>
-          </h2>
-          <p className="text-[var(--text-color)] mt-4 max-w-2xl">
-            Choose the plan that fits your growth stage.
-          </p>
-        </div>
-      </section>
+      <Pricing />
 
       {/* Contact Section */}
       <section id="contact" className="section bg-[var(--accent-color-3)]" style={{ scrollMarginTop: '100px' }}>

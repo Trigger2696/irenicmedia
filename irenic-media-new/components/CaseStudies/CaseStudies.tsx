@@ -10,28 +10,28 @@ const caseStudies = [
     description:
       'Implemented a comprehensive digital marketing strategy that increased qualified leads by 150% and reduced cost per acquisition by 40% within 6 months.',
     tags: ['Performance Marketing', 'SEO', 'Analytics'],
-    image: '/images/case-studies/placeholder-1.jpg'
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop'
   },
   {
     title: 'GreenLeaf Brand Launch',
     description:
       'Built a complete brand presence from scratch, including social media strategy and influencer partnerships, resulting in 100k+ followers in the first quarter.',
     tags: ['Social Media', 'Influencer Marketing', 'Branding'],
-    image: '/images/case-studies/placeholder-2.jpg'
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop'
   },
   {
     title: 'FitnessPro App Growth',
     description:
       'Developed and launched a fitness app with integrated marketing campaign, achieving 200% increase in downloads and 4.8-star app store rating.',
     tags: ['Mobile App', 'User Acquisition', 'ASO'],
-    image: '/images/case-studies/placeholder-3.jpg'
+    image: 'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600&h=400&fit=crop'
   },
   {
     title: 'Bloom E-Commerce Expansion',
     description:
       'Scaled an e-commerce fashion brand with targeted performance campaigns, resulting in 3x ROI and 65% increase in repeat customer rate.',
     tags: ['E-Commerce', 'Performance Marketing', 'CRM'],
-    image: '/images/case-studies/placeholder-4.jpg'
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop'
   }
 ]
 

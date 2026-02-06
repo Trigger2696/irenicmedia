@@ -18,8 +18,8 @@ export function ServiceCard({ icon: Icon, title, description, className }: Servi
       className
     )}>
       {/* Icon */}
-      <div className="w-14 h-14 rounded-full bg-[var(--accent-color)] bg-opacity-10 flex items-center justify-center mb-4">
-        <Icon className="w-7 h-7 text-accent" />
+      <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+        <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
       </div>
 
       {/* Content */}

@@ -54,12 +54,9 @@ export default function Footer() {
               {/* Brand Column - Takes 2 cols on lg */}
               <div className="lg:col-span-2">
                 <div className="footer-logo-container">
-                  <div className="logo-container-footer">
-                    <img
-                      src="/assets/images/marko-logo.png"
-                      alt="Irenic Media"
-                      className="site-logo w-full h-auto"
-                    />
+                  <div className="logo-container-footer flex items-center gap-2">
+                    <span className="text-3xl md:text-4xl font-black text-accent">Irenic</span>
+                    <span className="text-3xl md:text-4xl font-black text-primary">Media</span>
                   </div>
                   <h4 className="text-xl md:text-2xl font-bold text-primary leading-relaxed">
                     Growth without chaos. Strategy without noise.

@@ -21,8 +21,8 @@ export function DifferentiatorCard({
     <div className="p-6 rounded-marko bg-[var(--body-bg)] border border-[var(--accent-color-3)] transition-all duration-300 hover:shadow-accent hover:-translate-y-1">
       {/* Icon with stat badge */}
       <div className="flex items-start justify-between mb-4">
-        <div className="w-14 h-14 rounded-full bg-[var(--accent-color)] bg-opacity-10 flex items-center justify-center">
-          <Icon className="w-7 h-7 text-accent" />
+        <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center">
+          <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
         </div>
         <div className="text-right">
           <div className="text-2xl font-bold text-accent">{stat}</div>

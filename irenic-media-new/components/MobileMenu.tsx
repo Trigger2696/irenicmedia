@@ -46,11 +46,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <div className="flex flex-col h-full">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-[var(--accent-color-3)]">
-                <img
-                  src="/assets/images/marko-logo.png"
-                  alt="Irenic Media"
-                  className="h-10 w-auto"
-                />
+                <div className="flex items-center gap-1">
+                  <span className="text-2xl font-black text-accent">Irenic</span>
+                  <span className="text-2xl font-black text-primary">Media</span>
+                </div>
                 <button
                   onClick={onClose}
                   className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent text-white font-bold hover:bg-accent/80 transition-colors"
