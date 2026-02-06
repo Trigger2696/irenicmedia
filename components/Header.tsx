@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { useScrollDirection } from '@/hooks/useScrollDirection'
 import { navLinks, contactInfo } from '@/lib/navigation'
 import ThemeToggle from './ThemeToggle'
@@ -14,7 +15,12 @@ export default function Header() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     const element = document.querySelector(href)
-    element?.scrollIntoView({ behavior: 'smooth' })
+    if (element) {
+      const headerOffset = 140
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.scrollY - headerOffset
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
+    }
   }
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -40,8 +46,15 @@ export default function Header() {
                 onClick={handleLogoClick}
                 className="flex items-center gap-2"
               >
-                <span className="text-2xl md:text-3xl font-black text-accent">Irenic</span>
-                <span className="text-2xl md:text-3xl font-black text-primary">Media</span>
+                <Image
+                  src="/irenic-logo.png"
+                  alt="Irenic Media"
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <span className="text-xl md:text-2xl font-black text-accent">Irenic</span>
+                <span className="text-xl md:text-2xl font-black text-primary">Media</span>
               </a>
             </div>
 

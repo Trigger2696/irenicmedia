@@ -16,7 +16,12 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     // Small delay to allow menu close animation
     setTimeout(() => {
       const element = document.querySelector(href)
-      element?.scrollIntoView({ behavior: 'smooth' })
+      if (element) {
+        const headerOffset = 140
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.scrollY - headerOffset
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
+      }
     }, 300)
   }
 

@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 interface FooterLink {
   name: string
   href: string
@@ -38,7 +40,12 @@ export default function Footer() {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else {
         const element = document.querySelector(href)
-        element?.scrollIntoView({ behavior: 'smooth' })
+        if (element) {
+          const headerOffset = 140
+          const elementPosition = element.getBoundingClientRect().top
+          const offsetPosition = elementPosition + window.scrollY - headerOffset
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
+        }
       }
     }
   }
@@ -55,8 +62,15 @@ export default function Footer() {
               <div className="lg:col-span-2">
                 <div className="footer-logo-container">
                   <div className="logo-container-footer flex items-center gap-2">
-                    <span className="text-3xl md:text-4xl font-black text-accent">Irenic</span>
-                    <span className="text-3xl md:text-4xl font-black text-primary">Media</span>
+                    <Image
+                      src="/irenic-logo.png"
+                      alt="Irenic Media"
+                      width={56}
+                      height={56}
+                      className="w-12 h-12 md:w-14 md:h-14"
+                    />
+                    <span className="text-2xl md:text-3xl font-black text-accent">Irenic</span>
+                    <span className="text-2xl md:text-3xl font-black text-primary">Media</span>
                   </div>
                   <h4 className="text-xl md:text-2xl font-bold text-primary leading-relaxed">
                     Growth without chaos. Strategy without noise.
