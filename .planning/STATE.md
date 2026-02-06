@@ -6,7 +6,7 @@
 
 **Core value:** Website clearly communicates Irenic Media's positioning as a strategy-first agency and enables client contact.
 
-**Current focus:** Phase 5 complete. Ready for Phase 6 (Visual Polish).
+**Current focus:** Phase 6 in progress. Font Awesome icon migration complete.
 
 ---
 
@@ -14,22 +14,23 @@
 
 **Milestone:** v1.0 — Irenic Media Website Launch
 
-**Phase:** 5 of 6 (Pricing & Contact)
+**Phase:** 6 of 6 (Visual Polish)
 
-**Plan:** 1 of 1 complete
+**Plan:** 2 of 3 complete
 
-**Status:** Phase complete
+**Status:** In progress
 
-**Last activity:** 2026-02-06 - Completed 05-01-PLAN.md (Contact Form & Section)
+**Last activity:** 2026-02-06 - Completed 06-02-PLAN.md (Font Awesome Icon Migration)
 
 **Progress:**
 ```
-[██████████████████████████████████████████████████████████████████████] 5/6 phases (83% - Phase 5 complete)
-Phase 1: Foundation & Layout — Verified ✓
-Phase 2: Hero Section — Verified ✓
-Phase 3: Services & About — Verified ✓
-Phase 4: Social Proof — Verified ✓
-Phase 5: Pricing & Contact — Verified ✓
+[████████████████████████████████████████████████████████████████████████████░░░] 6/6 phases (Phase 6: 2/3 plans)
+Phase 1: Foundation & Layout — Verified
+Phase 2: Hero Section — Verified
+Phase 3: Services & About — Verified
+Phase 4: Social Proof — Verified
+Phase 5: Pricing & Contact — Verified
+Phase 6: Visual Polish — In Progress (2/3 plans)
 ```
 
 ---
@@ -37,12 +38,12 @@ Phase 5: Pricing & Contact — Verified ✓
 ## Performance Metrics
 
 **Completed:**
-- Plans: 12
-- Phases: 5
+- Plans: 14
+- Phases: 5 complete, 1 in progress
 
 **Velocity:**
-- Average time per plan: ~4.5 min
-- Average time per phase: ~15 min (Phase 1: 25min, Phase 2: 15min, Phase 3: 5min, Phase 4: 15min)
+- Average time per plan: ~4 min
+- Average time per phase: ~15 min
 
 **Quality:**
 - Verifier pass rate: 100% (5/5 phases passed)
@@ -96,6 +97,9 @@ Phase 5: Pricing & Contact — Verified ✓
 | Form validation client-side only | Backend form handling would require API setup, out of scope | 2026-02-06 |
 | Auto-dismiss alerts after 3s | Standard UX pattern, not too intrusive | 2026-02-06 |
 | Company field optional | Reduces friction for individual inquiries | 2026-02-06 |
+| Shared AnimateOnScroll component | Refactored from per-component to shared @/components/AnimateOnScroll | 2026-02-06 |
+| Font Awesome icon strings | Simpler interface than LucideIcon type, works with FA classes | 2026-02-06 |
+| text-3xl for card icons | Matches visual size of previous w-7 h-7 lucide icons | 2026-02-06 |
 
 ### Open Todos
 
@@ -111,6 +115,9 @@ Phase 5: Pricing & Contact — Verified ✓
 - [x] Create fictional case studies (3-4) for Phase 4
 - [x] Define pricing tiers for Phase 5 (added during 04-03)
 - [x] Enhance Contact form with validation (Phase 5)
+- [x] Refactor AnimateOnScroll to shared component (06-01)
+- [x] Migrate icons to Font Awesome (06-02)
+- [ ] Complete visual polish plan 03 (06-03)
 
 ### Blockers
 
@@ -122,14 +129,14 @@ None.
 
 **Last session:** 2026-02-06
 
-**Stopped at:** Completed 05-01-PLAN.md (Contact Form & Section)
+**Stopped at:** Completed 06-02-PLAN.md (Font Awesome Icon Migration)
 
 **Resume file:** None
 
 **Context for next session:**
-- Phase 5 complete: Contact form with full validation integrated
-- ContactForm component: 4 fields, client-side validation, ARIA accessibility
-- Contact section: Two-column layout, icons for email/phone/location
-- All page sections working: Hero, Services, About, WhyUs, Testimonials, CaseStudies, Pricing, Contact
-- Website fully functional with lead capture capability
-- Ready for Phase 6: Visual Polish (animations and styling refinements)
+- Phase 6 in progress: Visual polish
+- 06-01 complete: AnimateOnScroll refactored to shared component
+- 06-02 complete: Icons migrated from lucide-react to Font Awesome
+- All section icons now use FA classes: fa-share-nodes, fa-magnifying-glass, etc.
+- ContactForm.tsx still uses lucide-react (intentionally excluded from migration)
+- Ready for 06-03: Final visual polish tasks
