@@ -13,7 +13,7 @@ This roadmap delivers a complete single-page Next.js website that matches the ma
 | 1 - Foundation & Layout | Core structure and navigation working | 5 | Complete |
 | 2 - Hero Section | Video background hero with brand messaging live | 5 | Complete |
 | 3 - Services & About | Core content sections complete | 10 | Complete |
-| 4 - Social Proof | Testimonials and case studies displayed | 6 | Not Started |
+| 4 - Social Proof | Testimonials and case studies displayed | 6 | Complete |
 | 5 - Pricing & Contact | Lead conversion sections functional | 7 | Not Started |
 | 6 - Visual Polish | Animations and styling match template exactly | 5 | Not Started |
 
@@ -136,9 +136,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — TestimonialCard component and Testimonials section with 4 client testimonials
-- [ ] 04-02-PLAN.md — Badge, CaseStudyCard components and CaseStudies section with 4 project showcases
-- [ ] 04-03-PLAN.md — Integrate Testimonials and CaseStudies into page.tsx
+- [x] 04-01-PLAN.md — TestimonialCard component and Testimonials section with 4 client testimonials
+- [x] 04-02-PLAN.md — Badge, CaseStudyCard components and CaseStudies section with 4 project showcases
+- [x] 04-03-PLAN.md — Integrate Testimonials and CaseStudies into page.tsx
 
 ---
 
