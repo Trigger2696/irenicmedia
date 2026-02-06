@@ -1,9 +1,9 @@
 'use client'
 
-import { LucideIcon } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 interface DifferentiatorCardProps {
-  icon: LucideIcon
+  icon: string
   title: string
   description: string
   stat: string
@@ -11,7 +11,7 @@ interface DifferentiatorCardProps {
 }
 
 export function DifferentiatorCard({
-  icon: Icon,
+  icon,
   title,
   description,
   stat,
@@ -22,7 +22,7 @@ export function DifferentiatorCard({
       {/* Icon with stat badge */}
       <div className="flex items-start justify-between mb-4">
         <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center">
-          <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
+          <i className={cn(icon, 'text-3xl text-accent')} />
         </div>
         <div className="text-right">
           <div className="text-2xl font-bold text-accent">{stat}</div>

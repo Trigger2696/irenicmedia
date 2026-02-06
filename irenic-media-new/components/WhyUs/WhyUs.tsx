@@ -3,32 +3,31 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { DifferentiatorCard } from './DifferentiatorCard'
-import { Lightbulb, BarChart3, Handshake, Zap } from 'lucide-react'
 
 const differentiators = [
   {
-    icon: Lightbulb,
+    icon: 'fa-solid fa-lightbulb',
     title: 'Strategy Before Execution',
     description: 'We don\'t jump into tactics. Every campaign starts with deep strategic thinking, clear objectives, and a roadmap for success.',
     stat: '100%',
     statLabel: 'Strategy First'
   },
   {
-    icon: BarChart3,
+    icon: 'fa-solid fa-chart-simple',
     title: 'Data-Driven Decisions',
     description: 'Our decisions are backed by data, not guesswork. We measure everything that matters and optimize based on real insights.',
     stat: '24/7',
     statLabel: 'Monitoring'
   },
   {
-    icon: Handshake,
+    icon: 'fa-solid fa-handshake',
     title: 'Transparent Partnership',
     description: 'No black boxes. We share our thinking, our data, and our learnings openly. You\'ll always know what we\'re doing and why.',
     stat: '95%',
     statLabel: 'Client Retention'
   },
   {
-    icon: Zap,
+    icon: 'fa-solid fa-bolt',
     title: 'Agile & Adaptive',
     description: 'Markets change fast. We stay nimble, continuously testing and iterating to keep you ahead of the curve.',
     stat: '2x',
