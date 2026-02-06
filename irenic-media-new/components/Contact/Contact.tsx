@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import AnimateOnScroll from '@/components/AnimateOnScroll'
 import { cn } from '@/lib/utils'
 import ContactForm from './ContactForm'
 
@@ -10,50 +9,6 @@ const contactDetails = [
   { icon: 'fa-solid fa-phone', label: 'Phone', value: '+91 98765 43210' },
   { icon: 'fa-solid fa-location-dot', label: 'Location', value: 'Mumbai, India' }
 ]
-
-// AnimateOnScroll wrapper for scroll-triggered animations
-function AnimateOnScroll({
-  children,
-  delay = 0,
-  variant = 'fadeIn'
-}: {
-  children: React.ReactNode
-  delay?: number
-  variant?: 'fadeIn' | 'fadeInLeft' | 'fadeInRight'
-}) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.15
-  })
-
-  const variants = {
-    fadeIn: {
-      initial: { opacity: 0, y: 30 },
-      animate: { opacity: 1, y: 0 }
-    },
-    fadeInLeft: {
-      initial: { opacity: 0, x: -30 },
-      animate: { opacity: 1, x: 0 }
-    },
-    fadeInRight: {
-      initial: { opacity: 0, x: 30 },
-      animate: { opacity: 1, x: 0 }
-    }
-  }
-
-  const selected = variants[variant]
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={selected.initial}
-      animate={inView ? selected.animate : selected.initial}
-      transition={{ duration: 0.6, delay }}
-    >
-      {children}
-    </motion.div>
-  )
-}
 
 export default function Contact() {
   return (
@@ -78,7 +33,7 @@ export default function Contact() {
         {/* Two-column grid: Contact Info + Form */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Column: Contact Info */}
-          <AnimateOnScroll variant="fadeInLeft" delay={0}>
+          <AnimateOnScroll animation="fadeInLeft" delay={0}>
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-bold text-primary mb-6">Get in Touch</h3>
@@ -115,7 +70,7 @@ export default function Contact() {
           </AnimateOnScroll>
 
           {/* Right Column: Contact Form */}
-          <AnimateOnScroll variant="fadeIn" delay={0.2}>
+          <AnimateOnScroll animation="fadeIn" delay={0.2}>
             <ContactForm />
           </AnimateOnScroll>
         </div>

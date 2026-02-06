@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import AnimateOnScroll from '@/components/AnimateOnScroll'
 import { TestimonialCard } from './TestimonialCard'
 
 const testimonials = [
@@ -38,31 +37,6 @@ const testimonials = [
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face'
   }
 ]
-
-// AnimateOnScroll wrapper for scroll-triggered animations
-function AnimateOnScroll({
-  children,
-  delay = 0
-}: {
-  children: React.ReactNode
-  delay?: number
-}) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.15
-  })
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6, delay }}
-    >
-      {children}
-    </motion.div>
-  )
-}
 
 export default function Testimonials() {
   return (

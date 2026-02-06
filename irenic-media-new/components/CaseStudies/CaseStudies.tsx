@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import AnimateOnScroll from '@/components/AnimateOnScroll'
 import { CaseStudyCard } from './CaseStudyCard'
 
 const caseStudies = [
@@ -34,30 +33,6 @@ const caseStudies = [
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop'
   }
 ]
-
-function AnimateOnScroll({
-  children,
-  delay = 0
-}: {
-  children: React.ReactNode
-  delay?: number
-}) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.15
-  })
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6, delay }}
-    >
-      {children}
-    </motion.div>
-  )
-}
 
 export default function CaseStudies() {
   return (

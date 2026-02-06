@@ -1,50 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-
-// AnimateOnScroll wrapper for scroll-triggered animations
-function AnimateOnScroll({
-  children,
-  animation = 'fadeInUp',
-  delay = 0
-}: {
-  children: React.ReactNode
-  animation?: 'fadeInUp' | 'fadeInLeft' | 'fadeInRight'
-  delay?: number
-}) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.15
-  })
-
-  const variants = {
-    fadeInUp: {
-      hidden: { opacity: 0, y: 30 },
-      visible: { opacity: 1, y: 0 }
-    },
-    fadeInLeft: {
-      hidden: { opacity: 0, x: -50 },
-      visible: { opacity: 1, x: 0 }
-    },
-    fadeInRight: {
-      hidden: { opacity: 0, x: 50 },
-      visible: { opacity: 1, x: 0 }
-    }
-  }
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
-      variants={variants[animation]}
-      transition={{ duration: 0.6, delay }}
-    >
-      {children}
-    </motion.div>
-  )
-}
+import AnimateOnScroll from '@/components/AnimateOnScroll'
 
 export default function About() {
   return (
