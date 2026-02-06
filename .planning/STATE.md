@@ -6,7 +6,7 @@
 
 **Core value:** Website clearly communicates Irenic Media's positioning as a strategy-first agency and enables client contact.
 
-**Current focus:** Phase 4 in progress. Completed 04-02 (Case Studies), ready for 04-03 (Social Proof Integration).
+**Current focus:** Phase 4 complete. Ready for Phase 5 (Pricing & Contact) or Phase 6 (Visual Polish).
 
 ---
 
@@ -16,19 +16,19 @@
 
 **Phase:** 4 of 6 (Social Proof)
 
-**Plan:** 2 of 3 complete
+**Plan:** 3 of 3 complete
 
-**Status:** In progress
+**Status:** Phase complete
 
-**Last activity:** 2026-02-06 - Completed 04-02-PLAN.md (Case Studies Section)
+**Last activity:** 2026-02-06 - Completed 04-03-PLAN.md (Social Proof Integration)
 
 **Progress:**
 ```
-[████████████████████████████████████████████████████----] 4/6 phases (67% - Phase 4 plan 2/3)
+[████████████████████████████████████████████████████████] 4/6 phases (67% - Phase 4 complete)
 Phase 1: Foundation & Layout — Verified ✓
 Phase 2: Hero Section — Verified ✓
 Phase 3: Services & About — Verified ✓
-Phase 4: Social Proof — In progress (2/3 plans)
+Phase 4: Social Proof — Complete ✓
 ```
 
 ---
@@ -36,15 +36,15 @@ Phase 4: Social Proof — In progress (2/3 plans)
 ## Performance Metrics
 
 **Completed:**
-- Plans: 10
-- Phases: 3
+- Plans: 11
+- Phases: 4
 
 **Velocity:**
 - Average time per plan: ~5 min
-- Average time per phase: ~15 min (Phase 1: 25min, Phase 2: 15min, Phase 3: 5min)
+- Average time per phase: ~15 min (Phase 1: 25min, Phase 2: 15min, Phase 3: 5min, Phase 4: 15min)
 
 **Quality:**
-- Verifier pass rate: 100% (3/3 phases passed)
+- Verifier pass rate: 100% (4/4 phases passed)
 - Rework rate: 0%
 
 ---
@@ -87,6 +87,11 @@ Phase 4: Social Proof — In progress (2/3 plans)
 | Badge component variants | default (muted bg) and accent (highlighted) for flexibility | 2026-02-06 |
 | Case studies 2-column grid | md:grid-cols-2 for project showcase, more visual than services 3-col | 2026-02-06 |
 | 3:2 image aspect ratio | Standard ratio for project screenshots, consistent presentation | 2026-02-06 |
+| Indian testimonial names | Ananya Sharma, Vikram Patel, Rahul Menon + Eloisa Flament for diversity | 2026-02-06 |
+| Real Unsplash images | Using images.unsplash.com for testimonials and case studies (no API key) | 2026-02-06 |
+| INR pricing tiers | Starter Rs.35k, Growth Rs.85k, Enterprise Custom - appropriate for Indian market | 2026-02-06 |
+| Tailwind v4 opacity syntax | bg-accent/10 instead of bg-opacity-10 for icon backgrounds | 2026-02-06 |
+| Hero behind navbar | Removed spacer div, hero extends from page top behind fixed header | 2026-02-06 |
 
 ### Open Todos
 
@@ -100,7 +105,8 @@ Phase 4: Social Proof — In progress (2/3 plans)
 - [x] Complete 03-02: About and Why Us sections
 - [x] Create fictional testimonials (3-4) for Phase 4
 - [x] Create fictional case studies (3-4) for Phase 4
-- [ ] Define pricing tiers for Phase 5
+- [x] Define pricing tiers for Phase 5 (added during 04-03)
+- [ ] Enhance Contact form with validation (Phase 5)
 
 ### Blockers
 
@@ -112,14 +118,15 @@ None.
 
 **Last session:** 2026-02-06
 
-**Stopped at:** Completed 04-02-PLAN.md (Case Studies Section)
+**Stopped at:** Completed 04-03-PLAN.md (Social Proof Integration)
 
 **Resume file:** None
 
 **Context for next session:**
-- Phase 4 plan 2/3 complete: Case Studies section implemented
-- Components: Badge, CaseStudyCard, CaseStudies
-- 4 fictional case studies with realistic marketing results
-- Badge component established for reusable pill-shaped tags
-- 3:2 aspect ratio for project images, responsive grid layout
-- Ready for 04-03: Social Proof Integration
+- Phase 4 complete: All social proof sections integrated and verified
+- Pricing component already added (Rs.35k/85k/Custom tiers)
+- All page sections working: Hero, Services, About, WhyUs, Testimonials, CaseStudies, Pricing, Contact
+- Real Unsplash images configured for testimonials and case studies
+- Indian names + branding updates applied throughout
+- Ready for Phase 5: Pricing & Contact (may only need contact form enhancements)
+- Or skip to Phase 6: Visual Polish
