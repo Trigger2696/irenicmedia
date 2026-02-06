@@ -15,7 +15,7 @@ This roadmap delivers a complete single-page Next.js website that matches the ma
 | 3 - Services & About | Core content sections complete | 10 | Complete |
 | 4 - Social Proof | Testimonials and case studies displayed | 6 | Complete |
 | 5 - Pricing & Contact | Lead conversion sections functional | 7 | Complete |
-| 6 - Visual Polish | Animations and styling match template exactly | 5 | Not Started |
+| 6 - Visual Polish | Animations and styling match template exactly | 5 | Complete |
 
 ---
 
@@ -196,9 +196,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 06-01-PLAN.md — Extract shared AnimateOnScroll component, standardize animation timing
-- [ ] 06-02-PLAN.md — Migrate icons from lucide-react to Font Awesome
-- [ ] 06-03-PLAN.md — Complete CSS variable audit, add Hero animation, final polish
+- [x] 06-01-PLAN.md — Extract shared AnimateOnScroll component, standardize animation timing
+- [x] 06-02-PLAN.md — Migrate icons from lucide-react to Font Awesome
+- [x] 06-03-PLAN.md — Complete CSS variable audit, add Hero animation, final polish
 
 ---
 
