@@ -14,7 +14,7 @@ This roadmap delivers a complete single-page Next.js website that matches the ma
 | 2 - Hero Section | Video background hero with brand messaging live | 5 | Complete |
 | 3 - Services & About | Core content sections complete | 10 | Complete |
 | 4 - Social Proof | Testimonials and case studies displayed | 6 | Complete |
-| 5 - Pricing & Contact | Lead conversion sections functional | 7 | Not Started |
+| 5 - Pricing & Contact | Lead conversion sections functional | 7 | Complete |
 | 6 - Visual Polish | Animations and styling match template exactly | 5 | Not Started |
 
 ---
@@ -169,7 +169,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Contact section with ContactForm, validation, and contact info display
+- [x] 05-01-PLAN.md — Contact section with ContactForm, validation, and contact info display
 
 ---
 
