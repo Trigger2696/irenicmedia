@@ -66,6 +66,29 @@
   --font-size-9xl: 40px;
   --font-size-10xl: 45px;
 
+  /* Extended Font Size Variables (marko template) */
+  --font-size-11xl: 46px;
+  --font-size-12xl: 50px;
+  --font-size-13xl: 56px;
+  --font-size-14xl: 64px;
+  --font-size-15xl: 100px;
+  --font-size-16xl: 130px;
+  --font-size-17xl: 160px;
+
+  /* Animation Timing Variables (marko template) */
+  --animation-fast: 0.75s;
+  --animation-normal: 1.25s;
+  --animation-slow: 2s;
+
+  /* Spacing Variables */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+
   /* Line Height Variables */
   --line-height-tight: 1em;
   --line-height-snug: 1.2em;
@@ -91,6 +114,16 @@
   --error-color: #E63946;
 }
 
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* ================== Base Styles ================== */
 
