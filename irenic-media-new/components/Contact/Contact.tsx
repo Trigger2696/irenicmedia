@@ -2,13 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import { cn } from '@/lib/utils'
 import ContactForm from './ContactForm'
 
 const contactDetails = [
-  { icon: Mail, label: 'Email', value: 'hello@irenicmedia.com' },
-  { icon: Phone, label: 'Phone', value: '+91 98765 43210' },
-  { icon: MapPin, label: 'Location', value: 'Mumbai, India' }
+  { icon: 'fa-solid fa-envelope', label: 'Email', value: 'hello@irenicmedia.com' },
+  { icon: 'fa-solid fa-phone', label: 'Phone', value: '+91 98765 43210' },
+  { icon: 'fa-solid fa-location-dot', label: 'Location', value: 'Mumbai, India' }
 ]
 
 // AnimateOnScroll wrapper for scroll-triggered animations
@@ -89,20 +89,17 @@ export default function Contact() {
 
               {/* Contact Details */}
               <div className="space-y-6">
-                {contactDetails.map((detail) => {
-                  const Icon = detail.icon
-                  return (
-                    <div key={detail.label} className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-accent" />
-                      </div>
-                      <div>
-                        <p className="text-[var(--text-color)] text-sm">{detail.label}</p>
-                        <p className="text-primary font-semibold">{detail.value}</p>
-                      </div>
+                {contactDetails.map((detail) => (
+                  <div key={detail.label} className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                      <i className={cn(detail.icon, 'text-2xl text-accent')} />
                     </div>
-                  )
-                })}
+                    <div>
+                      <p className="text-[var(--text-color)] text-sm">{detail.label}</p>
+                      <p className="text-primary font-semibold">{detail.value}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               {/* Additional Info */}

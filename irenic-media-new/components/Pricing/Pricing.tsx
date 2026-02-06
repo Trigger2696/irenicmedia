@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Check } from 'lucide-react'
 
 const pricingTiers = [
   {
@@ -138,7 +137,7 @@ export default function Pricing() {
                 <ul className="space-y-3 mb-8 flex-1">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <i className="fa-solid fa-check text-lg text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-[var(--text-color)] text-sm">{feature}</span>
                     </li>
                   ))}
