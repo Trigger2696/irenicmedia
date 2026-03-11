@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { navLinks } from '@/lib/navigation'
 
@@ -51,10 +52,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <div className="flex flex-col h-full">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-[var(--accent-color-3)]">
-                <div className="flex items-center gap-1">
-                  <span className="text-2xl font-black text-accent">Irenic</span>
-                  <span className="text-2xl font-black text-primary">Media</span>
-                </div>
+                <img
+                  src="/logo-white.png"
+                  alt="Irenic Media"
+                  className="h-[40px] w-auto mix-blend-screen"
+                />
                 <button
                   onClick={onClose}
                   className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent text-white font-bold hover:bg-accent/80 transition-colors"
@@ -84,10 +86,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {/* Footer - Contact Info */}
               <div className="p-6 border-t border-[var(--accent-color-3)]">
                 <p className="text-sm text-[var(--text-color)]">
-                  hello@irenicmedia.com
-                </p>
-                <p className="text-sm text-[var(--text-color)] mt-1">
-                  +91 98765 43210
+                  irenicsocialmedia@gmail.com
                 </p>
               </div>
             </div>

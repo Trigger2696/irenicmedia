@@ -4,8 +4,8 @@ import Hero from '@/components/Hero/Hero'
 import Services from '@/components/Services/Services'
 import About from '@/components/About/About'
 import WhyUs from '@/components/WhyUs/WhyUs'
-import Testimonials from '@/components/Testimonials/Testimonials'
-import CaseStudies from '@/components/CaseStudies/CaseStudies'
+// import Testimonials from '@/components/Testimonials/Testimonials'
+// import CaseStudies from '@/components/CaseStudies/CaseStudies'
 import Pricing from '@/components/Pricing/Pricing'
 import Contact from '@/components/Contact/Contact'
 
@@ -26,11 +26,11 @@ export default function Home() {
       {/* Why Us Section */}
       <WhyUs />
 
-      {/* Testimonials Section */}
-      <Testimonials />
+      {/* Testimonials Section - temporarily removed */}
+      {/* <Testimonials /> */}
 
-      {/* Case Studies Section */}
-      <CaseStudies />
+      {/* Case Studies Section - removed */}
+      {/* <CaseStudies /> */}
 
       {/* Pricing Section */}
       <Pricing />

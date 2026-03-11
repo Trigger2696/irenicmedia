@@ -1,8 +1,27 @@
 'use client'
 
+import { useState } from 'react'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
+import PricingModal from './PricingModal'
 
-const pricingTiers = [
+export interface FeatureDetail {
+  icon: string
+  title: string
+  description: string
+}
+
+export interface PricingTier {
+  name: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  featureDetails: FeatureDetail[]
+  cta: string
+  popular: boolean
+}
+
+const pricingTiers: PricingTier[] = [
   {
     name: 'Starter',
     price: '₹35,000',
@@ -15,6 +34,38 @@ const pricingTiers = [
       '5 Creative Posts/Week',
       'Email Support',
       'Basic Analytics Dashboard'
+    ],
+    featureDetails: [
+      {
+        icon: 'fa-solid fa-share-nodes',
+        title: 'Social Media Management (2 Platforms)',
+        description: 'Content calendar, scheduling, community management, and engagement tracking for Instagram + Facebook or any 2 platforms of your choice.'
+      },
+      {
+        icon: 'fa-solid fa-magnifying-glass-chart',
+        title: 'Basic SEO Optimization',
+        description: 'On-page SEO audit, keyword research for up to 20 keywords, meta tag optimization, and sitemap setup to boost your organic visibility.'
+      },
+      {
+        icon: 'fa-solid fa-chart-line',
+        title: 'Monthly Performance Report',
+        description: 'Detailed analytics report covering reach, engagement, traffic, and growth metrics with actionable insights delivered every month.'
+      },
+      {
+        icon: 'fa-solid fa-palette',
+        title: '5 Creative Posts per Week',
+        description: 'Professionally designed static and carousel graphics tailored to your brand identity — consistent, on-brand content every week.'
+      },
+      {
+        icon: 'fa-solid fa-envelope',
+        title: 'Email Support',
+        description: 'Dedicated support during business hours (Mon–Fri, 10 AM–7 PM IST) with a guaranteed 24-hour response time.'
+      },
+      {
+        icon: 'fa-solid fa-gauge-high',
+        title: 'Basic Analytics Dashboard',
+        description: 'Access to a real-time dashboard tracking key metrics across your managed platforms — always know how you\'re performing.'
+      }
     ],
     cta: 'Get Started',
     popular: false
@@ -33,6 +84,48 @@ const pricingTiers = [
       'Priority Support',
       'Competitor Analysis',
       'Influencer Outreach (Micro)'
+    ],
+    featureDetails: [
+      {
+        icon: 'fa-solid fa-share-nodes',
+        title: 'Social Media Management (4 Platforms)',
+        description: 'Full-service management across Instagram, Facebook, LinkedIn, and Twitter/X with tailored strategies per platform.'
+      },
+      {
+        icon: 'fa-solid fa-rocket',
+        title: 'Advanced SEO & Content Strategy',
+        description: 'Comprehensive SEO including technical audits, content planning, blog strategy, backlink outreach, and up to 50 keyword tracking.'
+      },
+      {
+        icon: 'fa-solid fa-bullseye',
+        title: 'Performance Marketing',
+        description: 'Google Ads and Meta Ads management with up to ₹50,000 monthly ad spend (billed separately), including A/B testing and conversion optimization.'
+      },
+      {
+        icon: 'fa-solid fa-chart-column',
+        title: 'Weekly Performance Reports',
+        description: 'In-depth weekly analytics with campaign performance breakdowns, ROI tracking, and strategy adjustment recommendations.'
+      },
+      {
+        icon: 'fa-solid fa-paintbrush',
+        title: '10 Creative Posts per Week',
+        description: 'Mix of static graphics, carousels, reels/short-form videos, and stories designed for maximum engagement across all platforms.'
+      },
+      {
+        icon: 'fa-solid fa-headset',
+        title: 'Priority Support',
+        description: 'Faster response times (within 4 hours) with a dedicated account coordinator and bi-weekly strategy calls.'
+      },
+      {
+        icon: 'fa-solid fa-binoculars',
+        title: 'Competitor Analysis',
+        description: 'Monthly competitive landscape report covering content strategies, ad activity, and market positioning of your top 5 competitors.'
+      },
+      {
+        icon: 'fa-solid fa-users',
+        title: 'Micro-Influencer Outreach',
+        description: 'Identification, vetting, and management of micro-influencer collaborations — up to 5 partnerships per month.'
+      }
     ],
     cta: 'Start Growing',
     popular: true
@@ -53,12 +146,61 @@ const pricingTiers = [
       '24/7 Priority Support',
       'Quarterly Strategy Reviews'
     ],
+    featureDetails: [
+      {
+        icon: 'fa-solid fa-layer-group',
+        title: 'Everything in Growth',
+        description: 'All features from the Growth plan included as your baseline — fully customizable to your specific business needs.'
+      },
+      {
+        icon: 'fa-solid fa-globe',
+        title: 'Unlimited Platform Management',
+        description: 'Manage presence across all relevant social platforms, review sites, and emerging channels without any platform limits.'
+      },
+      {
+        icon: 'fa-solid fa-user-tie',
+        title: 'Dedicated Account Manager',
+        description: 'A senior strategist assigned exclusively to your brand with weekly strategy sessions and direct communication channels.'
+      },
+      {
+        icon: 'fa-solid fa-code',
+        title: 'Custom Software Development',
+        description: 'Bespoke web applications, SaaS platforms, dashboards, and internal tools built to your exact specifications.'
+      },
+      {
+        icon: 'fa-solid fa-mobile-screen-button',
+        title: 'Mobile App Development',
+        description: 'Native or cross-platform mobile application development (iOS & Android) with ongoing maintenance and updates.'
+      },
+      {
+        icon: 'fa-solid fa-database',
+        title: 'Advanced Analytics & BI',
+        description: 'Custom BI dashboards, attribution modeling, predictive analytics, and data-driven strategy powered by your business data.'
+      },
+      {
+        icon: 'fa-solid fa-star',
+        title: 'Full-Scale Influencer Campaigns',
+        description: 'End-to-end influencer marketing across micro, mid-tier, and macro influencers with campaign strategy, negotiation, and reporting.'
+      },
+      {
+        icon: 'fa-solid fa-clock',
+        title: '24/7 Priority Support',
+        description: 'Round-the-clock dedicated support with guaranteed 1-hour response time for critical issues — we\'re always on.'
+      },
+      {
+        icon: 'fa-solid fa-compass',
+        title: 'Quarterly Strategy Reviews',
+        description: 'Executive-level strategic reviews with C-suite presentations, market analysis, and 90-day roadmap planning sessions.'
+      }
+    ],
     cta: 'Contact Us',
     popular: false
   }
 ]
 
 export default function Pricing() {
+  const [selectedTier, setSelectedTier] = useState<PricingTier | null>(null)
+
   return (
     <section
       id="pricing"
@@ -120,6 +262,7 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <button
+                  onClick={() => setSelectedTier(tier)}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     tier.popular
                       ? 'cta-primary text-white'
@@ -135,9 +278,18 @@ export default function Pricing() {
 
         {/* Note */}
         <p className="text-center text-[var(--text-color)] text-sm mt-8">
-          * Ad spend is billed separately. Custom requirements? <a href="#contact" className="text-accent hover:underline">Let's talk</a>.
+          * Ad spend is billed separately. Custom requirements? <a href="#contact" className="text-accent hover:underline">Let&apos;s talk</a>.
         </p>
       </div>
+
+      {/* Pricing Modal */}
+      {selectedTier && (
+        <PricingModal
+          tier={selectedTier}
+          isOpen={!!selectedTier}
+          onClose={() => setSelectedTier(null)}
+        />
+      )}
     </section>
   )
 }

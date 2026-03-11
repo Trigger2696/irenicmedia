@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 interface FooterLink {
@@ -11,7 +12,6 @@ const quickLinks: FooterLink[] = [
   { name: 'Home', href: '#' },
   { name: 'About Us', href: '#about' },
   { name: 'Services', href: '#services' },
-  { name: 'Case Studies', href: '#case-studies' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'Contact Us', href: '#contact' },
 ]
@@ -29,10 +29,20 @@ const socialLinks = [
   { icon: 'fa-brands fa-linkedin', href: 'https://linkedin.com', label: 'LinkedIn' },
   { icon: 'fa-brands fa-youtube', href: 'https://youtube.com', label: 'YouTube' },
   { icon: 'fa-brands fa-instagram', href: 'https://instagram.com', label: 'Instagram' },
-  { icon: 'fa-solid fa-envelope', href: 'mailto:hello@irenicmedia.com', label: 'Email' },
+  { icon: 'fa-solid fa-envelope', href: 'mailto:irenicsocialmedia@gmail.com', label: 'Email' },
 ]
 
 export default function Footer() {
+  const [isLight, setIsLight] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsLight(document.documentElement.classList.contains('light'))
+    check()
+    const observer = new MutationObserver(check)
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+    return () => observer.disconnect()
+  }, [])
+
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#')) {
       e.preventDefault()
@@ -61,16 +71,12 @@ export default function Footer() {
               {/* Brand Column - Takes 2 cols on lg */}
               <div className="lg:col-span-2">
                 <div className="footer-logo-container">
-                  <div className="logo-container-footer flex items-center gap-2">
-                    <Image
-                      src="/irenic-logo.png"
+                  <div className="logo-container-footer flex items-center">
+                    <img
+                      src={isLight ? '/logo-black.png' : '/logo-white.png'}
                       alt="Irenic Media"
-                      width={56}
-                      height={56}
-                      className="w-12 h-12 md:w-14 md:h-14"
+                      className={`h-[50px] md:h-[60px] w-auto ${isLight ? 'mix-blend-multiply' : 'mix-blend-screen'}`}
                     />
-                    <span className="text-2xl md:text-3xl font-black text-accent">Irenic</span>
-                    <span className="text-2xl md:text-3xl font-black text-primary">Media</span>
                   </div>
                   <h4 className="text-xl md:text-2xl font-bold text-primary leading-relaxed">
                     Growth without chaos. Strategy without noise.
@@ -128,9 +134,8 @@ export default function Footer() {
               <div>
                 <h5 className="text-xl font-bold text-primary mb-6">Contact Info</h5>
                 <ul className="contact-list">
-                  <li>hello@irenicmedia.com</li>
-                  <li>+91 98765 43210</li>
-                  <li>Mumbai, India</li>
+                  <li>irenicsocialmedia@gmail.com</li>
+                  <li>Navi Mumbai, India</li>
                 </ul>
               </div>
 

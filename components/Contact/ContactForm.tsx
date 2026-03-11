@@ -67,22 +67,36 @@ export default function ContactForm() {
     }
   }
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     if (!validateForm()) {
-      // Show error alert for 3 seconds
       setShowError(true)
       setTimeout(() => setShowError(false), 3000)
       return
     }
 
-    // Form is valid - show success and reset
-    setShowSuccess(true)
-    setTimeout(() => setShowSuccess(false), 3000)
-    setFormData({ name: '', email: '', company: '', message: '' })
-    setErrors({})
+    setIsSubmitting(true)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (!res.ok) throw new Error('Failed')
+      setShowSuccess(true)
+      setTimeout(() => setShowSuccess(false), 5000)
+      setFormData({ name: '', email: '', company: '', message: '' })
+      setErrors({})
+    } catch {
+      setShowError(true)
+      setTimeout(() => setShowError(false), 3000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -222,9 +236,10 @@ export default function ContactForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full cta-primary text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300"
+          disabled={isSubmitting}
+          className="w-full cta-primary text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 disabled:opacity-60"
         >
-          Send Message
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </div>
     </form>

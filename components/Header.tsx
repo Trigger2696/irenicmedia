@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useScrollDirection } from '@/hooks/useScrollDirection'
-import { navLinks, contactInfo } from '@/lib/navigation'
+import { navLinks } from '@/lib/navigation'
 import ThemeToggle from './ThemeToggle'
 import MobileMenu from './MobileMenu'
 import { cn } from '@/lib/utils'
@@ -11,6 +11,15 @@ import { cn } from '@/lib/utils'
 export default function Header() {
   const { scrollDirection, isAtTop } = useScrollDirection()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isLight, setIsLight] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsLight(document.documentElement.classList.contains('light'))
+    check()
+    const observer = new MutationObserver(check)
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+    return () => observer.disconnect()
+  }, [])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -44,17 +53,13 @@ export default function Header() {
               <a
                 href="#"
                 onClick={handleLogoClick}
-                className="flex items-center gap-2"
+                className="flex items-center"
               >
-                <Image
-                  src="/irenic-logo.png"
+                <img
+                  src={isLight ? '/logo-black.png' : '/logo-white.png'}
                   alt="Irenic Media"
-                  width={48}
-                  height={48}
-                  className="w-10 h-10 md:w-12 md:h-12"
+                  className={`h-[44px] md:h-[54px] w-auto ${isLight ? 'mix-blend-multiply' : 'mix-blend-screen'}`}
                 />
-                <span className="text-xl md:text-2xl font-black text-accent">Irenic</span>
-                <span className="text-xl md:text-2xl font-black text-primary">Media</span>
               </a>
             </div>
 
@@ -81,15 +86,6 @@ export default function Header() {
                 <ThemeToggle />
               </div>
 
-              {/* Phone number - Desktop only */}
-              <div className="hidden xl:flex navbar-icon-wrapper items-center gap-0 rounded-full px-1 py-1 shadow-[var(--box-shadow-top-left)] hover:shadow-[var(--box-shadow-bottom-right)] transition-shadow duration-500">
-                <div className="icon-circle w-10 h-10 flex items-center justify-center rounded-full bg-accent text-white">
-                  <i className="fa-solid fa-phone-volume text-sm"></i>
-                </div>
-                <span className="text-primary font-semibold text-sm px-4">
-                  {contactInfo.phone}
-                </span>
-              </div>
 
               {/* Mobile Menu Button */}
               <button

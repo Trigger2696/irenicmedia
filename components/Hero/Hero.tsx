@@ -1,7 +1,7 @@
 'use client'
 
 import AnimateOnScroll from '@/components/AnimateOnScroll'
-import YouTubeBackground from './YouTubeBackground'
+import VideoBackground from './YouTubeBackground'
 import { StatCounter } from './StatCounter'
 
 /**
@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen overflow-hidden" style={{ scrollMarginTop: '100px' }}>
       {/* Video Background */}
-      <YouTubeBackground videoId="P68V3iH4TeE" />
+      <VideoBackground />
 
       {/* Gradient Overlay */}
       <div className="hero-overlay absolute inset-0 z-[1]" />

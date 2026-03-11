@@ -5,9 +5,8 @@ import { cn } from '@/lib/utils'
 import ContactForm from './ContactForm'
 
 const contactDetails = [
-  { icon: 'fa-solid fa-envelope', label: 'Email', value: 'hello@irenicmedia.com' },
-  { icon: 'fa-solid fa-phone', label: 'Phone', value: '+91 98765 43210' },
-  { icon: 'fa-solid fa-location-dot', label: 'Location', value: 'Mumbai, India' }
+  { icon: 'fa-solid fa-envelope', label: 'Email', value: 'irenicsocialmedia@gmail.com' },
+  { icon: 'fa-solid fa-location-dot', label: 'Location', value: 'Navi Mumbai, India' }
 ]
 
 export default function Contact() {
